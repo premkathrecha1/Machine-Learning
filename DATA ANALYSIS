@@ -1,0 +1,18 @@
+# EXP 1: Data Analysis
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Sample data
+data = sns.load_dataset("iris")
+print(data.head())
+
+# Basic Statistics
+print(data.describe())
+
+# Check Missing Values
+print(data.isnull().sum())
+
+# Visualization
+sns.pairplot(data, hue="species")
+plt.show()
